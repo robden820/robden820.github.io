@@ -1,35 +1,115 @@
-<!DOCTYPE html>
-<html land="en">
+<!--
+ ____________________________________________________________
+|                                                            |
+|    DESIGN + Pat Heard { http://fullahead.org }             |
+|      DATE + 2006.03.19                                     |
+| COPYRIGHT + Free use if this notice is left in place       |
+|____________________________________________________________|
+-->
 
-    <head>
-        <meta charset="utf-8">
-        <title>Homepage</title>
-		<link rel="stylesheet" href="style.css">
-    </head>
-    
-    <body>
-        <div id="wrapper">
-            <header>
-                <h1><img src="images/me.jpg" width="240"> Rob Dennison </h1>
-                <h2>Research</h2>
-            </header>
-            
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
+<html lang="en">
+
+<head>
+	<title>Homepage</title>
+
+	<link rel="stylesheet" type="text/css" href="html.css" media="screen, projection, tv " />
+	<link rel="stylesheet" type="text/css" href="layout.css" media="screen, projection, tv" />
+	<link rel="stylesheet" type="text/css" href="print.css" media="print" />
+
+</head>
+
+
+<body>
+
+<!-- CONTENT: Holds all site content except for the footer.  This is what causes the footer to stick to the bottom -->
+	<div id="content">
+	
+	<!-- HEADER: Holds title, subtitle and header images -->
+		<div id="header"> 
+			<div id="title"> 
+				<h1>Rob Dennison</h1>
+			</div>
+			
+			<img src="images/me.jpg" width="240"/>
+
+
+
+			<!-- MAIN MENU: Top horizontal menu of the site.  Use class="here" to turn the current page tab on -->
+			<div id="mainMenu">
+				<ul class="floatRight">
+					<li><a href="index.html">Home</a></li>
 					<li><a href="games.html">Video Games</a></li>
-					<li><a href="research.html">Research</a></li>
-                </ul>
-            </nav>
-            
-            <main>
-                <h1>Research</h1>
-            </main>
-        
-            <footer>
-				<p>Last Updated: 21/11/2022<p>
-            </footer>
-        </div>
-    </body>
+					<li><a href="research.html" class="here">Research</a></li>
+				</ul>
+			</div>
+
+
+
+
+			<!-- PAGE CONTENT BEGINS: This is where you would define the columns (number, width and alignment) -->
+			<div id="page">
+
+
+				<!-- 25 percent width column, aligned to the left -->
+				<div class="width25 floatLeft leftColumn">
+
+					<h1>About Me</h1>
+
+					<ul class="sideMenu">
+						<li class="here">
+							<ul>
+								<li><a href="https://github.com/robden820" title="Jump to section">GitHub</a></li>
+								<li><a href="https://www.linkedin.com/in/rob-dennison-8a6440198/" title="Jump to section">LinkedIn</a></li>
+							</ul>
+						</li>
+					</ul>
+
+					<p>
+						PhD student at The University of Sheffield, <a href="https://www.sheffield.ac.uk/dcs/research/groups/visual-computing">Visual Computing Research Group</a>.
+					</p>
+
+				</div>
+
+
+
+
+				<!-- 75 percent width column, aligned to the right -->
+				<div class="width75 floatRight">
+
+
+					<!-- Gives the gradient block -->
+					<div class="gradient">
+
+						<h1>Research</h1>
+
+						<p>
+							This page will be used for published research and research projects.
+						</p>
+						
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+		<!-- FOOTER: Site footer for links, copyright, etc. -->
+		<div id="footer">
+			<div id="width">
+				<span class="floatLeft">
+					Last Updated: 21st Nov 2022
+				</span>
+				
+				<span class="floatRight">
+					<!--This theme is free for distriubtion, so long as link to openwebdesign.org stay on the theme-->
+					Courtesy  <a href="http://www.openwebdesign.org" target="_blank">Open Web Design</a>
+				</span>
+			</div>
+		</div>
+
+	</div>
+</body>
 
 </html>
