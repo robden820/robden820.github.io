@@ -83,8 +83,56 @@
 						<h1>Research</h1>
 
 						<p>
-							This page will be used for published research and research projects.
+							This page contains published research, video demonstrations and links to any published code.
 						</p>
+						
+						<h2>Using The Polynomial Particle-In-Cell Method For Liquid-Fabric Interaction</h2>
+						
+						<img src="images/Research/PolyPIC/yarn_medium_polypic.jpg" class="center" width="600"/>
+						
+						<h3>Abstract </h3>
+						
+						<div>
+							<p>
+								Authors: Robert Dennison, Steve Maddock
+								<br>
+								Liquid-fabric interaction simulations using particle-in-cell (PIC) based models have been used to simulate a wide variety of phenomena and yield impressive visual results.
+								However, these models suffer from numerical damping due to the data interpolation between the particles and grid.
+								Our paper addresses this by using the polynomial PIC (PolyPIC) model instead of the affine PIC (APIC) model that is used in current state-of-the-art wet cloth models.
+								The affine transfers of the APIC model are replaced by the higher order polynomials of PolyPIC, thus reducing numerical dissipation and improving resolution of vorticial details.
+								This improved energy preservation enables more dynamic simulations to be generated although this is at an increased computational cost.
+								<br>
+								The published paper can be found <a href="https://arxiv.org/abs/2308.01060"> here</a>.
+								<br>
+								The code repository for this work can be found <a href="https://github.com/robden820/libwetcloth"> here</a>.
+							</p>
+						</div>
+
+						<h3>Demonstration Videos</h3>
+						
+						<div>
+							<video class="center" width="600" controls>
+								<source src="videos/Research/PolyPIC/APIC(left)_vs_PolyPIC(right)_yarn.mp4" type="video/mp4" >
+								Your browser does not support the mp4 video tag.
+							</video>
+							<p>
+								A comparison of fluid splashing onto a medium sized square of yarn fabric using APIC (top) and PolyPIC (bottom) transfers. 
+								The colours of the particles indicate their velocities, with red indicating a high velocity and dark blue indicating a low velocity.
+								PolyPIC causes more energy to be transferred from the falling fluid to the yarn and results in a more dynamic result. 
+						</div>
+						
+						<div>
+							<video class="center" width="600" controls>
+								<source src="videos/Research/PolyPIC/APIC(left)_vs_PolyPIC(right)_cloth.mp4" type="video/mp4" >
+								Your browser does not support the mp4 video tag.
+							</video>
+							<p>
+								A comparison of a fluid splash onto a small piece of cloth using APIC (top) and PolyPIC (bottom) transfers.
+								The colours of the particles indicate their velocities, with red indicating a high velocity and dark blue indicating a low velocity.
+								The reduced damping means that more fluid splashes off the piece of cloth rather than being absorbed.
+								The fluid that is absorbed exhibits more thin strand behaviour as it drips from the cloth in PolyPIC than APIC.
+						</div>
+							
 						
 					</div>
 
