@@ -10,7 +10,7 @@
 <html lang="en">
 
 <head>
-	<title>Rob Dennison - Homepage</title>
+	<title>Rob Dennison - Blog</title>
 
 	<link rel="stylesheet" type="text/css" href="html.css" media="screen, projection, tv " />
 	<link rel="stylesheet" type="text/css" href="layout.css" media="screen, projection, tv" />
@@ -37,10 +37,10 @@
 			<!-- MAIN MENU: Top horizontal menu of the site.  Use class="here" to turn the current page tab on -->
 			<div id="mainMenu">
 				<ul class="floatRight">
-					<li><a href="index.html" class="here">Home</a></li>
+					<li><a href="index.html">Home</a></li>
 					<li><a href="games.html">Video Games</a></li>
 					<li><a href="research.html">Research</a></li>
-					<li><a href="blog.html">Blog</a></li>
+					<li><a href="blog.html" class="here">Blog</a></li>
 				</ul>
 			</div>
 
@@ -80,16 +80,42 @@
 
 					<!-- Gives the gradient block -->
 					<div class="gradient">
-						<h1>Home</h1>
+
+						<h1>Blog</h1>
 
 						<p>
-							Welcome to my website!
+							This page contains other projects that aren't published research.
 						</p>
+						
+						<h2>Multiphase PIC Fluids</h2>
+						
+						<img src="images/Blog/Multiphase/Bottleneck_3D.png" class="center" width="600"/>
+						
 						<p>
-							This is a home for projects I have been part of during my time working in the video games industry, as well as for any published research
-							during my PhD studies.
+							A multiphase fluid simulation using the affine particle-in-cell method (APIC), based on the MultiFLIP paper by Boyd and Bridson (<a href="https://www.cs.ubc.ca/~rbridson/docs/boyd-tog2011-multiflip.pdf">link to paper here</a>).
 						</p>
 
+						<h3>Demonstration Videos</h3>
+						
+						<div>
+							<video class="center" width="600" controls>
+								<source src="videos/Blog/Multiphase/3D_Bottleneck.mp4" type="video/mp4" >
+								Your browser does not support the mp4 video tag.
+							</video>
+							<p>
+								A rendered view of water flowing through a small opening from one container to another. As the liquid falls through, air bubbles rise up through the liquid. Rendered using Houndini.
+						</div>
+						
+						<div>
+							<video class="center" width="600" controls>
+								<source src="videos/Blog/Multiphase/3D_oil_water.mp4" type="video/mp4" >
+								Your browser does not support the mp4 video tag.
+							</video>
+							<p>
+								A rendered view of oil and water. The less dense oil begins the simulation underneath the higher density water. Since the liquids don't mix, they form a complex interface.
+								The two then separate out again into layers, with the water resting underneath the oil. Rendered using Houdini.
+						</div>
+						
 					</div>
 
 				</div>
@@ -103,7 +129,7 @@
 		<div id="footer">
 			<div id="width">
 				<span class="floatLeft">
-					Last Updated: 21st Nov 2022
+					Last Updated: 15th March 2024
 				</span>
 				
 				<span class="floatRight">
