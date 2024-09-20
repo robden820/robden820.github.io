@@ -1,0 +1,143 @@
+<!--
+ ____________________________________________________________
+|                                                            |
+|    DESIGN + Pat Heard { http://fullahead.org }             |
+|      DATE + 2006.03.19                                     |
+| COPYRIGHT + Free use if this notice is left in place       |
+|____________________________________________________________|
+-->
+
+<html lang="en">
+
+<head>
+	<title>Rob Dennison - Blog</title>
+
+	<link rel="stylesheet" type="text/css" href="../html.css" media="screen, projection, tv " />
+	<link rel="stylesheet" type="text/css" href="../layout.css" media="screen, projection, tv" />
+	<link rel="stylesheet" type="text/css" href="../print.css" media="print" />
+
+</head>
+
+
+<body>
+
+<!-- CONTENT: Holds all site content except for the footer.  This is what causes the footer to stick to the bottom -->
+	<div id="content">
+	
+	<!-- HEADER: Holds title, subtitle and header images -->
+		<div id="header"> 
+			<div id="title"> 
+				<h1>Rob Dennison</h1>
+			</div>
+			
+			<img src="../images/me.jpg" width="240"/>
+
+
+
+			<!-- MAIN MENU: Top horizontal menu of the site.  Use class="here" to turn the current page tab on -->
+			<div id="mainMenu">
+				<ul class="floatRight">
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../games.html">Video Games</a></li>
+					<li><a href="../research.html">Research</a></li>
+					<li><a href="../blog.html" class="here">Blog</a></li>
+				</ul>
+			</div>
+
+
+
+
+			<!-- PAGE CONTENT BEGINS: This is where you would define the columns (number, width and alignment) -->
+			<div id="page">
+
+
+				<!-- 25 percent width column, aligned to the left -->
+				<div class="width25 floatLeft leftColumn">
+
+					<h1>About Me</h1>
+
+					<ul class="sideMenu">
+						<li class="here">
+							<ul>
+								<li><a href="https://github.com/robden820" title="Jump to section">GitHub</a></li>
+								<li><a href="https://www.linkedin.com/in/rob-dennison-8a6440198/" title="Jump to section">LinkedIn</a></li>
+							</ul>
+						</li>
+					</ul>
+
+					<p>
+						PhD student at The University of Sheffield, <a href="https://www.sheffield.ac.uk/dcs/research/groups/visual-computing">Visual Computing Research Group</a>.
+					</p>
+
+				</div>
+
+
+
+
+				<!-- 75 percent width column, aligned to the right -->
+				<div class="width75 floatRight">
+
+
+					<!-- Gives the gradient block -->
+					<div class="gradient">
+
+						<h1>Blog</h1>
+						
+						<h3><a href="../blog.html">Back to all projects</a></h3>
+						
+						<h2>Multiphase PIC Fluids</h2>
+						
+						<img src="../images/Blog/Multiphase/Bottleneck_3D.png" class="center" width="600"/>
+						
+						<p>
+							A multiphase fluid simulation using the affine particle-in-cell method (APIC), based on the MultiFLIP paper by Boyd and Bridson (<a href="https://www.cs.ubc.ca/~rbridson/docs/boyd-tog2011-multiflip.pdf" target="_blank">link to paper here</a>).
+						</p>
+
+						<h3>Demonstration Videos</h3>
+						
+						<div>
+							<video class="center" width="600" controls>
+								<source src="../videos/Blog/Multiphase/3D_bottleneck.mp4" type="video/mp4" >
+								Your browser does not support the mp4 video tag.
+							</video>
+							<p>
+								A rendered view of water flowing through a small opening from one container to another. As the liquid falls through, air bubbles rise up through the liquid. Rendered using Houndini.
+						</div>
+						
+						<div>
+							<video class="center" width="600" controls>
+								<source src="../videos/Blog/Multiphase/3D_oil_water.mp4" type="video/mp4" >
+								Your browser does not support the mp4 video tag.
+							</video>
+							<p>
+								A rendered view of oil and water. The less dense oil begins the simulation underneath the higher density water. Since the liquids don't mix, they form a complex interface.
+								The two then separate out again into layers, with the water resting underneath the oil. Rendered using Houdini.
+						</div>
+						
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+		<!-- FOOTER: Site footer for links, copyright, etc. -->
+		<div id="footer">
+			<div id="width">
+				<span class="floatLeft">
+					Last Updated: 15th March 2024
+				</span>
+				
+				<span class="floatRight">
+					<!--This theme is free for distriubtion, so long as link to openwebdesign.org stay on the theme-->
+					Courtesy  <a href="http://www.openwebdesign.org" target="_blank">Open Web Design</a>
+				</span>
+			</div>
+		</div>
+
+	</div>
+</body>
+
+</html>
