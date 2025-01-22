@@ -1,119 +1,135 @@
-<!--
- ____________________________________________________________
-|                                                            |
-|    DESIGN + Pat Heard { http://fullahead.org }             |
-|      DATE + 2006.03.19                                     |
-| COPYRIGHT + Free use if this notice is left in place       |
-|____________________________________________________________|
--->
-
 <html lang="en">
 
 <head>
 	<title>Rob Dennison - Homepage</title>
 
-	<link rel="stylesheet" type="text/css" href="html.css" media="screen, projection, tv " />
-	<link rel="stylesheet" type="text/css" href="layout.css" media="screen, projection, tv" />
-	<link rel="stylesheet" type="text/css" href="print.css" media="print" />
-
+	<link rel="stylesheet" type="text/css" href="main.css"/>
 </head>
 
 
 <body>
+	<!-- SIDE NAV -->
+	<nav>
+		<!-- HEADER: -->
+		<header> 
+			<img src="images/me.jpg" width="240" />
+			<h1>Rob Dennison</h1>
 
-<!-- CONTENT: Holds all site content except for the footer.  This is what causes the footer to stick to the bottom -->
-	<div id="content">
-	
-	<!-- HEADER: Holds title, subtitle and header images -->
-		<div id="header"> 
-			<div id="title"> 
-				<h1>Rob Dennison</h1>
-			</div>
+			<p>
+				PhD student at The University of Sheffield, <a href="https://www.sheffield.ac.uk/dcs/research/groups/visual-computing">Visual Computing Research Group</a>.
+			</p>
+			<hr>
+			<p>
+				This is a home for projects I have been part of during my time working in the video games industry, as well as for any published research
+				during my PhD studies.
+			</p>
+			<hr>
+			<!-- NAV MENU-->
+			<ul>
+				<li><a href="index.html" class="nav">Home</a></li>
+				<li><a href="#research" class="nav">Research</a></li>
+				<li><a href="#video_games" class="nav">Video Games</a></li>
+				<li><a href="#blog" class="nav">Blog</a></li>
+			</ul>
+			<hr>
+			<ul>
+				<li><a href="https://github.com/robden820" title="Jump to section">GitHub</a></li>
+				<li><a href="https://www.linkedin.com/in/rob-dennison-8a6440198/" title="Jump to section">LinkedIn</a></li>
+			</ul>
+		</header>
+
+		<footer>
+				Author: Rob Dennison  ||  Last Updated: 22st Jan 2025
+		</footer>
+  	</nav>
+
+  	<main>
+		<!-- RESEARCH -->
+		<div id="research" class="section">
+			<h1>Research</h1>
+			<p>
+				This page contains published research, video demonstrations and links to any published code.
+			</p>
+			<h2>Using The Polynomial Particle-In-Cell Method For Liquid-Fabric Interaction</h2>
+			<img src="images/Research/PolyPIC/yarn_medium_polypic.jpg" class="center" width="600"/>
+			<p>
+				The work was accepted as a short paper for GRAPP 2024, and was presented by myself.
+			</p>
+
+			<h3>Abstract </h3>
+			<p>
+				Authors: Robert Dennison, Steve Maddock
+				<br>
+				Liquid-fabric interaction simulations using particle-in-cell (PIC) based models have been used to simulate a wide variety of phenomena and yield impressive visual results.
+				However, these models suffer from numerical damping due to the data interpolation between the particles and grid.
+				Our paper addresses this by using the polynomial PIC (PolyPIC) model instead of the affine PIC (APIC) model that is used in current state-of-the-art wet cloth models.
+				The affine transfers of the APIC model are replaced by the higher order polynomials of PolyPIC, thus reducing numerical dissipation and improving resolution of vorticial details.
+				This improved energy preservation enables more dynamic simulations to be generated although this is at an increased computational cost.
+				<br>
+				The published paper can be found <a href="https://www.scitepress.org/PublicationsDetail.aspx?ID=RRPGsSLWBm0=&t=1"> here</a>.
+				<br>
+				The code repository for this work can be found <a href="https://github.com/robden820/libwetcloth"> here</a>.
+			</p>
+
+			<h3>Demonstration Videos</h3>
+				<video class="center" width="600" controls>
+					<source src="videos/Research/PolyPIC/Render.mp4" type="video/mp4" >
+					Your browser does not support the mp4 video tag.
+				</video>
+				<p>
+					A rendered view of a ball of fluid falling onto yarn-based fabric. Rendered using Houndini.
+				</p>
+				<video class="center" width="600" controls>
+					<source src="videos/Research/PolyPIC/Supplementary_Video.mp4" type="video/mp4" >
+					Your browser does not support the mp4 video tag.
+				</video>
+				<p>
+					Comparisons of simulations using APIC and PolyPIC.
+				</p>
+		</div>
+
+		<!-- VIDEO GAMES -->
+		<div id="video_games" class="section">
+
+			<h1>Video Games</h1>
+			<p>
+				After graduating I spent 2 years working for <a href="https://warrington.sumo-digital.com/">Sumo Warrington</a> and was able to work on some really exciting projects!
+			</p>
 			
-			<img src="images/me.jpg" width="240"/>
+			<h2>Mortal Kombat 1</h2>
+			<img src="images/games/MK1.jpeg" class="center" />
+			<p>
+				Released on 19th Sep 2023 on various platforms: Windows, PlayStation 5, Xbox Series X/S, Nintendo Switch.
+			</p>
 
-
-
-			<!-- MAIN MENU: Top horizontal menu of the site.  Use class="here" to turn the current page tab on -->
-			<div id="mainMenu">
-				<ul class="floatRight">
-					<li><a href="index.html" class="here">Home</a></li>
-					<li><a href="games.html">Video Games</a></li>
-					<li><a href="research.html">Research</a></li>
-					<li><a href="blog.html">Blog</a></li>
-				</ul>
-			</div>
-
-
-
-
-			<!-- PAGE CONTENT BEGINS: This is where you would define the columns (number, width and alignment) -->
-			<div id="page">
-
-
-				<!-- 25 percent width column, aligned to the left -->
-				<div class="width25 floatLeft leftColumn">
-
-					<h1>About Me</h1>
-
-					<ul class="sideMenu">
-						<li class="here">
-							<ul>
-								<li><a href="https://github.com/robden820" title="Jump to section">GitHub</a></li>
-								<li><a href="https://www.linkedin.com/in/rob-dennison-8a6440198/" title="Jump to section">LinkedIn</a></li>
-							</ul>
-						</li>
-					</ul>
-
-					<p>
-						PhD student at The University of Sheffield, <a href="https://www.sheffield.ac.uk/dcs/research/groups/visual-computing">Visual Computing Research Group</a>.
-					</p>
-
-				</div>
-
-
-
-
-				<!-- 75 percent width column, aligned to the right -->
-				<div class="width75 floatRight">
-
-
-					<!-- Gives the gradient block -->
-					<div class="gradient">
-						<h1>Home</h1>
-
-						<p>
-							Welcome to my website!
-						</p>
-						<p>
-							This is a home for projects I have been part of during my time working in the video games industry, as well as for any published research
-							during my PhD studies.
-						</p>
-
-					</div>
-
-				</div>
-
-			</div>
-
+			<h2>Football Manager 2021</h2>
+			<img src="images/games/Football-Manager-2021.jpg" class="center" />
+			<p>
+				Released between 24th Nov 2020 - 15th Dec 2020 on various platforms: Windows, macOS, iOS, Android, Xbox One, Xbox Series X/S, Nintendo Switch.
+			</p>
 		</div>
 
+		<!-- BLOG/PERSONAL PROJECTS-->
+		<div id="blog" class="section">
 
-		<!-- FOOTER: Site footer for links, copyright, etc. -->
-		<div id="footer">
-			<div id="width">
-				<span class="floatLeft">
-					Last Updated: 21st Nov 2022
-				</span>
-				
-				<span class="floatRight">
-					<!--This theme is free for distriubtion, so long as link to openwebdesign.org stay on the theme-->
-					Courtesy  <a href="http://www.openwebdesign.org" target="_blank">Open Web Design</a>
-				</span>
-			</div>
+			<h1>Blog</h1>
+			<p>
+				This page contains other projects that aren't published research.
+			</p>
+			
+			<h2><a href="blog_pages/Multiphase_PIC.html">Multiphase PIC Fluids</a></h2>
+			<img src="images/Blog/Multiphase/Bottleneck_3D.png" class="center" width="600"/>
+			<p>
+				A multiphase fluid simulation using the affine particle-in-cell method (APIC), based on the MultiFLIP paper by Boyd and Bridson (<a href="https://www.cs.ubc.ca/~rbridson/docs/boyd-tog2011-multiflip.pdf"  target="_blank">link to paper here</a>).
+			</p>
+			
+			<h2><a href="blog_pages/PIC_fluids.html">PIC Fluids</a></h2>
+			<img src="images/Blog/PIC/AFLIP.png" class="center" width="600"/>
+			<p>
+				Fluid simulation using the particle in cell method. Implemented in C++ on the CPU, making use of oneTBB for multithreading.
+			</p>
+			
 		</div>
-
-	</div>
+	</main>
 </body>
-
 </html>

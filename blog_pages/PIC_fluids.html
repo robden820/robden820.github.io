@@ -1,135 +1,71 @@
-<!--
- ____________________________________________________________
-|                                                            |
-|    DESIGN + Pat Heard { http://fullahead.org }             |
-|      DATE + 2006.03.19                                     |
-| COPYRIGHT + Free use if this notice is left in place       |
-|____________________________________________________________|
--->
-
 <html lang="en">
 
 <head>
-	<title>Rob Dennison - Blog</title>
+	<title>Rob Dennison - Homepage</title>
 
-	<link rel="stylesheet" type="text/css" href="../html.css" media="screen, projection, tv " />
-	<link rel="stylesheet" type="text/css" href="../layout.css" media="screen, projection, tv" />
-	<link rel="stylesheet" type="text/css" href="../print.css" media="print" />
-
+	<link rel="stylesheet" type="text/css" href="../main.css"/>
 </head>
 
 
 <body>
+	<!-- SIDE NAV -->
+	<nav>
+		<!-- HEADER: -->
+		<header> 
+			<img src="../images/me.jpg" width="240" />
+			<h1>Rob Dennison</h1>
 
-<!-- CONTENT: Holds all site content except for the footer.  This is what causes the footer to stick to the bottom -->
-	<div id="content">
-	
-	<!-- HEADER: Holds title, subtitle and header images -->
-		<div id="header"> 
-			<div id="title"> 
-				<h1>Rob Dennison</h1>
-			</div>
+			<p>
+				PhD student at The University of Sheffield, <a href="https://www.sheffield.ac.uk/dcs/research/groups/visual-computing">Visual Computing Research Group</a>.
+			</p>
+			<hr>
+			<p>
+				This is a home for projects I have been part of during my time working in the video games industry, as well as for any published research
+				during my PhD studies.
+			</p>
+			<hr>
+			<!-- NAV MENU-->
+			<ul>
+				<li><a href="../index.html" class="nav">Home</a></li>
+				<li><a href="../index.html #research" class="nav">Research</a></li>
+				<li><a href="../index.html #video_games" class="nav">Video Games</a></li>
+				<li><a href="../index.html #blog" class="nav">Blog</a></li>
+			</ul>
+			<hr>
+			<ul>
+				<li><a href="https://github.com/robden820" title="Jump to section">GitHub</a></li>
+				<li><a href="https://www.linkedin.com/in/rob-dennison-8a6440198/" title="Jump to section">LinkedIn</a></li>
+			</ul>
+		</header>
+
+		<footer>
+				Author: Rob Dennison  ||  Last Updated: 22nd Jan 2025
+		</footer>
+  	</nav>
+
+  	<main>
+		<div class="section">
+
+			<h3><a href="../index.html #blog">Back to all projects</a></h3>
 			
-			<img src="../images/me.jpg" width="240"/>
+			<h1>PIC Fluids</h1>
 
+			<img src="../images/Blog/PIC/AFLIP.png" class="center" width="600"/>
+			<p>
+				Fluid simulation using the particle in cell method. Implemented in C++ on the CPU, making use of oneTBB for multithreading.
+				The code for this project can be found on GitHub <a href="https://github.com/robden820/MPM_Fluids" target="_blank">here</a>.
+			</p>
 
-
-			<!-- MAIN MENU: Top horizontal menu of the site.  Use class="here" to turn the current page tab on -->
-			<div id="mainMenu">
-				<ul class="floatRight">
-					<li><a href="../index.html">Home</a></li>
-					<li><a href="../games.html">Video Games</a></li>
-					<li><a href="../research.html">Research</a></li>
-					<li><a href="../blog.html" class="here">Blog</a></li>
-				</ul>
-			</div>
-
-
-
-
-			<!-- PAGE CONTENT BEGINS: This is where you would define the columns (number, width and alignment) -->
-			<div id="page">
-
-
-				<!-- 25 percent width column, aligned to the left -->
-				<div class="width25 floatLeft leftColumn">
-
-					<h1>About Me</h1>
-
-					<ul class="sideMenu">
-						<li class="here">
-							<ul>
-								<li><a href="https://github.com/robden820" title="Jump to section">GitHub</a></li>
-								<li><a href="https://www.linkedin.com/in/rob-dennison-8a6440198/" title="Jump to section">LinkedIn</a></li>
-							</ul>
-						</li>
-					</ul>
-
-					<p>
-						PhD student at The University of Sheffield, <a href="https://www.sheffield.ac.uk/dcs/research/groups/visual-computing">Visual Computing Research Group</a>.
-					</p>
-
-				</div>
-
-
-
-
-				<!-- 75 percent width column, aligned to the right -->
-				<div class="width75 floatRight">
-
-
-					<!-- Gives the gradient block -->
-					<div class="gradient">
-
-						<h1>Blog</h1>
-						
-						<h3><a href="../blog.html">Back to all projects</a></h3>
-						
-						<h2>PIC Fluids</h2>
-						
-						<img src="../images/Blog/PIC/AFLIP.png" class="center" width="600"/>
-						
-						<p>
-							Fluid simulation using the particle in cell method. Implemented in C++ on the CPU, making use of oneTBB for multithreading.
-							The code for this project can be found on GitHub <a href="https://github.com/robden820/MPM_Fluids" target="_blank">here</a>.
-						</p>
-
-						<h3>Demonstration Videos</h3>
-						
-						<div>
-							<video class="center" width="600" controls>
-								<source src="../videos/Blog/PIC/comparison.mp4" type="video/mp4" >
-								Your browser does not support the mp4 video tag.
-							</video>
-							<p>
-								A comparison of PIC, FLIP, APIC, and AFLIP. Rendered using OpenGL.
-						</div>
-
-						
-					</div>
-
-				</div>
-
-			</div>
-
+			<h3>Demonstration Videos</h3>
+			
+			<video class="center" width="600" controls>
+				<source src="../videos/Blog/PIC/comparison.mp4" type="video/mp4" >
+				Your browser does not support the mp4 video tag.
+			</video>
+			<p>
+				A comparison of PIC, FLIP, APIC, and AFLIP. Rendered using OpenGL.
+			</p>
 		</div>
-
-
-		<!-- FOOTER: Site footer for links, copyright, etc. -->
-		<div id="footer">
-			<div id="width">
-				<span class="floatLeft">
-					Last Updated: 20th September 2024
-				</span>
-				
-				<span class="floatRight">
-					<!--This theme is free for distriubtion, so long as link to openwebdesign.org stay on the theme-->
-					Courtesy  <a href="http://www.openwebdesign.org" target="_blank">Open Web Design</a>
-				</span>
-			</div>
-		</div>
-
-	</div>
+	</main>
 </body>
-
 </html>

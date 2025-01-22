@@ -1,0 +1,73 @@
+:root
+{
+  --sidenav_width: 20%;
+  --sidenav_pad_l: 3%;
+  --sidenav_pad_r: 3%;
+  --sidenav_pad_t: 20px;
+  --sidenav_width_total: calc(var(--sidenav_pad_l) + var(--sidenav_pad_r) + var(--sidenav_width));
+  --main_width: calc(100% - var(--sidenav_pad_l) - var(--sidenav_pad_r) - var(--sidenav_width));
+  --body_color: #8C51AD;
+  --item_color: #FFFFFF;
+}
+
+body{
+  font-family:'Courier New', Courier, monospace;
+  background-color: var(--body_color);
+}
+
+/* The sidebar menu */
+nav {
+  padding-left: var(--sidenav_pad_l);
+  padding-right: var(--sidenav_pad_r);
+  padding-top: var(--sidenav_pad_t);
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: var(--sidenav_width); /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: var(--item_color);
+  overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+/* The navigation menu links */
+nav a.nav {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  color: #0f428f;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+nav a:hover {
+  color: #de8cff;
+}
+
+nav footer {
+  font-size: small;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+}
+
+/* Style page content */
+main {
+  margin-left: var(--sidenav_width_total); /* Same as the width of the sidebar */
+  padding: 0px 10px
+}
+
+main .section
+{
+  margin: 5% 5% 5% 5%;
+  padding: 1.5%;
+  border-radius: 15px;
+  background-color: var(--item_color);
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
