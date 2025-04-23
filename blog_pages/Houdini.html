@@ -1,0 +1,120 @@
+<html lang="en">
+
+<head>
+	<title>Rob Dennison - Blog</title>
+
+	<link rel="stylesheet" type="text/css" href="../main.css"/>
+</head>
+
+
+<body>
+	<!-- SIDE NAV -->
+	<nav>
+		<!-- HEADER: -->
+		<header> 
+			<img src="../images/me.jpg" width="240" />
+			<h1>Rob Dennison</h1>
+
+			<p>
+				PhD student at The University of Sheffield, <a href="https://www.sheffield.ac.uk/dcs/research/groups/visual-computing">Visual Computing Research Group</a>.
+			</p>
+			<hr>
+			<p>
+				This is a home for projects I have been part of during my time working in the video games industry, as well as for any published research
+				during my PhD studies.
+			</p>
+			<hr>
+			<!-- NAV MENU-->
+			<ul>
+				<li><a href="../index.html" class="nav">Home</a></li>
+				<li><a href="../index.html#research" class="nav">Research</a></li>
+				<li><a href="../index.html#video_games" class="nav">Video Games</a></li>
+				<li><a href="../index.html#blog" class="nav">Blog</a></li>
+			</ul>
+			<hr>
+			<ul>
+				<li><a href="https://github.com/robden820" title="Jump to section">GitHub</a></li>
+				<li><a href="https://www.linkedin.com/in/rob-dennison-8a6440198/" title="Jump to section">LinkedIn</a></li>
+			</ul>
+		</header>
+
+		<footer>
+				Author: Rob Dennison  ||  Last Updated: 23rd April 2025
+		</footer>
+  	</nav>
+
+  	<main>
+		<div class="section">
+
+			<h3><a href="../index.html#blog">Back to all projects</a></h3>
+	
+			<h1>Houdini</h1>
+	
+			<p>
+				As I've used Houdini for producing renders of simulation output along my PhD studies, I've realised that I have hardly scratched the surface of what it's capable of.
+				I've decided that when I have some bits of free time I'm going to try and learn a bit more about what Houdini can be used for.
+				I'm not an artist so I'm not going to spend loads of time trying to create perfect scenes, but rather just get a bit of a flavour of what you could do, were you an artist.
+			</p>
+			
+			<p>
+				I've decided to split this page up, as I think it'll be best to keep all of my learnings in one place rather than across lots of pages.
+				I've also not tried to do things in any particularly logical order, just picking things out as they seem interesting - maybe I will come to regret this when this page grows into a jumbled mess.
+			</p>
+			
+			<ol>
+				<li><a href="#1_MPM" class="nav">MPM</a></li>
+			</ol>
+		</div>
+		
+		<div id="1_MPM" class="section">
+		
+			<h2>1. MPM</h2>
+			
+			<p>
+				I decided that since I have been studying MPM a lot for my own work that it would be interesting to get a feel for it in a production environment.
+				I found a course on the SideFx website, <a href="https://www.sidefx.com/tutorials/mpm-h205-masterclass/" target="_blank">MPM Houdini Masterclass</a>, and followed through the introductory section.
+				I experimented with some of the different materials on offer and created some very simple scenes.
+			</p>
+	
+			<video class="center" width="300" controls>
+				<source src="../videos/Blog/Houdini/1_MPM/r_static.mp4" type="video/mp4" >
+				Your browser does not support the mp4 video tag.
+			</video>
+			<p>
+				I first started off with a basic scene of 2 different materials a ball of "Jello" in red and a ball of water in blue, alongside a toroidal collider.
+				I dropped the resolution so that I could get some results quickly, although I was impressed by the speed of the simulation.
+				The course noted that the simulation was run using OpenCL and NanoVDB, both of which I would like to look into at some point.
+				
+				Since a lot of research in the field of physics-based animation is moving towards GPU implementations, it would be good to spend some time learning more about parallelism and OpenCL seems like it could be a good candidate
+				(alongside others such as WebGPU, when I get round to looking into this I'll have to see which language seems best for my needs).
+				I've worked on including some parallelism in my own simulations by leveraging OneTBB, but only in a fairly limited way.
+				
+				In a similar sense, it would be good to look at OpenVDB as this seems to be an industry standard framework.
+			</p>
+	
+			<video class="center" width="300" controls>
+				<source src="../videos/Blog/Houdini/1_MPM/r_anim_rigid.mp4" type="video/mp4" >
+				Your browser does not support the mp4 video tag.
+			</video>
+			<p>
+				It is also very easy to set up animated MPM colliders, here I just tried using a rigid animation rather than a deforming animation (which you could use for interactions between MPM and animated characters, for example).
+			</p>
+			
+			<video class="center" width="300" controls>
+				<source src="../videos/Blog/Houdini/1_MPM/r_multi.mp4" type="video/mp4" >
+				Your browser does not support the mp4 video tag.
+			</video>
+			<p>
+				Without having to fiddle with any parameters there's a few materials to play with out of the box with different constitutive models.
+				Here's a side-by-side of snow (left), wet mud (middle), and honey (right).
+			</p>
+			
+			<p>
+				Leaving it here for now rather than going through the advanced examples in the course, but I'd be interested to play around with this feature more.
+				Since I've done some work on multiphase fluids I'd like to try and recreate some of those scenarios in Houdini and compare results.
+				I'd also like to compare the MPM water with their FLIP fluids simulation, to see why you would choose to use one over the other when producing scenes in Houdini.
+			</p>
+		</div>
+	</main>
+</body>
+</html>
